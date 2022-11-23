@@ -14,7 +14,7 @@ fn main() {
     let mut input2 = String::new();
     let mut input3 = String::new();
 
-    println!("Please place your order \n Must be from 1 to 6 ");
+    println!("Please place your order \n Must be from 1 to 5 ");
     io::stdin().read_line(&mut input1).expect("Wrong input");
     let food:i32 = input1.trim().parse().expect("Wrong input");
 
@@ -28,7 +28,14 @@ fn main() {
         let amount:f32 = input2.trim().parse().expect("Wrong input");
 
         let total = price * amount;
-        println!("Your Total is {} Naira",total );
+        //println!("Your Total is {} Naira",total );
+
+        if total > 10000.0 {
+            let discount:f32 = (10.0 / 100.0) * total;
+            println!("Your Total is {} with discount Naira",discount );
+        } else{
+            println!("Your Total is {}Naira",total );
+        }
     }
     if food == 2 {
         println!("You ordered Fried Rice & Chicken  ");
@@ -40,7 +47,14 @@ fn main() {
         let amount:f32 = input2.trim().parse().expect("Wrong input");
 
         let total = price * amount;
-        println!("Your Total is {} Naira",total );
+        //println!("Your Total is {} Naira",total );
+
+        if total > 10000.0 {
+            let discount:f32 = (10.0 / 100.0) * total;
+            println!("Your Total is {} with discount Naira",discount );
+        } else{
+            println!("Your Total is {}Naira",total );
+        }
     }
     if food == 3 {
         println!("You ordered Amala & Ewedu Soup ");
@@ -52,7 +66,14 @@ fn main() {
         let amount:f32 = input2.trim().parse().expect("Wrong input");
 
         let total = price * amount;
-        println!("Your Total is {} Naira",total );
+        //println!("Your Total is {} Naira",total );
+
+        if total > 10000.0 {
+            let discount:f32 = (10.0 / 100.0) * total;
+            println!("Your Total is {} with discount Naira",discount );
+        } else{
+            println!("Your Total is {}Naira",total );
+        }
     }
     if food == 4 {
         println!("You ordered Eba & Egusi Soup ");
@@ -64,11 +85,18 @@ fn main() {
         let amount:f32 = input2.trim().parse().expect("Wrong input");
 
         let total = price * amount;
-        println!("Your Total is {} Naira",total );
+        //println!("Your Total is {} Naira",total );
+
+        if total > 10000.0 {
+            let discount:f32 = (10.0 / 100.0) * total;
+            println!("Your Total is {} with discount Naira",discount );
+        } else{
+            println!("Your Total is {}Naira",total );
+        }
     }
     if food == 5 {
         println!("You ordered Eba & Egusi Soup ");
-        println!("Price: 2500  ");
+        println!("Price: 25d00  ");
         let price = 2500.0;
 
         println!("How many do you want? ");
@@ -76,6 +104,15 @@ fn main() {
         let amount:f32 = input2.trim().parse().expect("Wrong input");
 
         let total = price * amount;
-        println!("Your Total is {} Naira",total );
+        // println!("Your Total is {} Naira",total );
+
+        if total > 10000.0 {
+            let discount:f32 = (10.0 / 100.0) * total;
+            println!("Your Total is {} with discount Naira",discount );
+        } else{
+            println!("Your Total is {}Naira",total );
+        }
     }
+
+
 }
